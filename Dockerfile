@@ -11,6 +11,8 @@ openssh-server
 RUN apt clean
 
 ## SSH
+
+# Permitimos el acceso por password por SSH
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 # Creamos un nuevo usuario
