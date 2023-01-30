@@ -11,8 +11,6 @@ docker build -t <usuario-de-docker-hub>/<nombre-de-repositorio-de-imagen>:<etiqu
 ~~~bash
 docker run --name <nombre-contenedor> -p 8080:80 -p 2222:22 <image-id | nombre-de-repositorio-de-imagen>
 
-docker run -p 8080:80 -p 2222:22 <imagen>
-
 # Uso de volumenes
 docker run -v /home/user/Downloads/folder/:/var/www/html/ -p 8080:80 -p 2222:22 <imagen>
 ~~~
@@ -32,6 +30,17 @@ curl localhost:8080
 ssh art-usr@localhost -p 2222
 ~~~
 
+# Detener y eliminar imagen y contenedor
+~~~bash
+#Detiente el contedor
+docker stop <nombre-contenedor>
+
+# Borra el contenedor
+docker rm <nombre-contenedor>
+
+# Borra la imagen del contenedor
+docker rmi <image-id | nombre-de-repositorio-de-imagen>
+~~~
 ## Archivos
 + apache-ssh-script
     + Script utilizado para iniciar los servicios SSH y Apache del contenedor
