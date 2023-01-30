@@ -10,9 +10,6 @@ docker build -t <usuario-de-docker-hub>/<nombre-de-repositorio-de-imagen>:<etiqu
 ## Implementación de la imagen en un contenedor
 ~~~bash
 docker run --name <nombre-contenedor> -p 8080:80 -p 2222:22 <image-id | nombre-de-repositorio-de-imagen>
-
-# Uso de volumenes
-docker run -v /home/user/Downloads/folder/:/var/www/html/ -p 8080:80 -p 2222:22 <imagen>
 ~~~
 
 ## Funcionamiento
